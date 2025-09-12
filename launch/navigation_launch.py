@@ -18,12 +18,18 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 <<<<<<< HEAD
+<<<<<<< HEAD
 from launch.actions import DeclareLaunchArgument, GroupAction, SetEnvironmentVariable
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_ros.actions import LoadComposableNodes
 from launch_ros.actions import Node
 from launch_ros.descriptions import ComposableNode
+=======
+from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable
+from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node
+>>>>>>> origin/main
 =======
 from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable
 from launch.substitutions import LaunchConfiguration
@@ -41,6 +47,7 @@ def generate_launch_description():
     autostart = LaunchConfiguration('autostart')
     params_file = LaunchConfiguration('params_file')
 <<<<<<< HEAD
+<<<<<<< HEAD
     use_composition = LaunchConfiguration('use_composition')
     container_name = LaunchConfiguration('container_name')
     container_name_full = (namespace, '/', container_name)
@@ -55,6 +62,8 @@ def generate_launch_description():
                        'waypoint_follower',
                        'velocity_smoother']
 =======
+=======
+>>>>>>> origin/main
     default_bt_xml_filename = LaunchConfiguration('default_bt_xml_filename')
     map_subscribe_transient_local = LaunchConfiguration('map_subscribe_transient_local')
 
@@ -63,6 +72,9 @@ def generate_launch_description():
                        'recoveries_server',
                        'bt_navigator',
                        'waypoint_follower']
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
@@ -78,7 +90,13 @@ def generate_launch_description():
     param_substitutions = {
         'use_sim_time': use_sim_time,
 <<<<<<< HEAD
+<<<<<<< HEAD
         'autostart': autostart}
+=======
+        'default_bt_xml_filename': default_bt_xml_filename,
+        'autostart': autostart,
+        'map_subscribe_transient_local': map_subscribe_transient_local}
+>>>>>>> origin/main
 =======
         'default_bt_xml_filename': default_bt_xml_filename,
         'autostart': autostart,
@@ -91,6 +109,7 @@ def generate_launch_description():
             param_rewrites=param_substitutions,
             convert_types=True)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     stdout_linebuf_envvar = SetEnvironmentVariable(
         'RCUTILS_LOGGING_BUFFERED_STREAM', '1')
@@ -293,6 +312,8 @@ def generate_launch_description():
 
     return ld
 =======
+=======
+>>>>>>> origin/main
     return LaunchDescription([
         # Set env var to print messages to stdout immediately
         SetEnvironmentVariable('RCUTILS_LOGGING_BUFFERED_STREAM', '1'),
@@ -374,4 +395,7 @@ def generate_launch_description():
                         {'node_names': lifecycle_nodes}]),
 
     ])
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main

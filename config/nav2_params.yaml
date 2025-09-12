@@ -27,7 +27,11 @@ amcl:
     recovery_alpha_slow: 0.0
     resample_interval: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     robot_model_type: "nav2_amcl::DifferentialMotionModel"
+=======
+    robot_model_type: "differential"
+>>>>>>> origin/main
 =======
     robot_model_type: "differential"
 >>>>>>> origin/main
@@ -44,7 +48,10 @@ amcl:
     scan_topic: scan
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 amcl_map_client:
   ros__parameters:
     use_sim_time: True
@@ -53,6 +60,9 @@ amcl_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 bt_navigator:
   ros__parameters:
@@ -60,6 +70,7 @@ bt_navigator:
     global_frame: map
     robot_base_frame: base_link
     odom_topic: /odom
+<<<<<<< HEAD
 <<<<<<< HEAD
     bt_loop_duration: 10
     default_server_timeout: 20
@@ -78,6 +89,8 @@ bt_navigator:
     - nav2_back_up_action_bt_node
     - nav2_drive_on_heading_bt_node
 =======
+=======
+>>>>>>> origin/main
     enable_groot_monitoring: True
     groot_zmq_publisher_port: 1666
     groot_zmq_server_port: 1667
@@ -88,14 +101,20 @@ bt_navigator:
     - nav2_back_up_action_bt_node
     - nav2_spin_action_bt_node
     - nav2_wait_action_bt_node
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     - nav2_clear_costmap_service_bt_node
     - nav2_is_stuck_condition_bt_node
     - nav2_goal_reached_condition_bt_node
     - nav2_goal_updated_condition_bt_node
 <<<<<<< HEAD
+<<<<<<< HEAD
     - nav2_globally_updated_goal_condition_bt_node
     - nav2_is_path_valid_condition_bt_node
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
     - nav2_initial_pose_received_condition_bt_node
@@ -105,7 +124,10 @@ bt_navigator:
     - nav2_speed_controller_bt_node
     - nav2_truncate_path_action_bt_node
 <<<<<<< HEAD
+<<<<<<< HEAD
     - nav2_truncate_path_local_action_bt_node
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
     - nav2_goal_updater_node_bt_node
@@ -114,6 +136,7 @@ bt_navigator:
     - nav2_round_robin_node_bt_node
     - nav2_transform_available_condition_bt_node
     - nav2_time_expired_condition_bt_node
+<<<<<<< HEAD
 <<<<<<< HEAD
     - nav2_path_expiring_timer_condition
     - nav2_distance_traveled_condition_bt_node
@@ -144,6 +167,11 @@ bt_navigator_navigate_to_pose_rclcpp_node:
 
 bt_navigator_rclcpp_node:
 >>>>>>> origin/main
+=======
+    - nav2_distance_traveled_condition_bt_node
+
+bt_navigator_rclcpp_node:
+>>>>>>> origin/main
   ros__parameters:
     use_sim_time: True
 
@@ -155,9 +183,14 @@ controller_server:
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
 <<<<<<< HEAD
+<<<<<<< HEAD
     failure_tolerance: 0.3
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
+=======
+    progress_checker_plugin: "progress_checker"
+    goal_checker_plugin: "goal_checker"
+>>>>>>> origin/main
 =======
     progress_checker_plugin: "progress_checker"
     goal_checker_plugin: "goal_checker"
@@ -171,6 +204,7 @@ controller_server:
       movement_time_allowance: 10.0
     # Goal checker parameters
 <<<<<<< HEAD
+<<<<<<< HEAD
     #precise_goal_checker:
     #  plugin: "nav2_controller::SimpleGoalChecker"
     #  xy_goal_tolerance: 0.25
@@ -182,11 +216,16 @@ controller_server:
       xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.25
 =======
+=======
+>>>>>>> origin/main
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.25
       yaw_goal_tolerance: 0.25
       stateful: True
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     # DWB parameters
     FollowPath:
@@ -232,11 +271,17 @@ controller_server:
       RotateToGoal.lookahead_time: -1.0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 controller_server_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 local_costmap:
   local_costmap:
@@ -273,6 +318,7 @@ local_costmap:
           marking: True
           data_type: "LaserScan"
 <<<<<<< HEAD
+<<<<<<< HEAD
           raytrace_max_range: 3.0
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
@@ -282,6 +328,8 @@ local_costmap:
         map_subscribe_transient_local: True
       always_send_full_costmap: True
 =======
+=======
+>>>>>>> origin/main
       static_layer:
         map_subscribe_transient_local: True
       always_send_full_costmap: True
@@ -291,6 +339,9 @@ local_costmap:
   local_costmap_rclcpp_node:
     ros__parameters:
       use_sim_time: True
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 global_costmap:
@@ -316,10 +367,13 @@ global_costmap:
           marking: True
           data_type: "LaserScan"
 <<<<<<< HEAD
+<<<<<<< HEAD
           raytrace_max_range: 3.0
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
           obstacle_min_range: 0.0
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
       static_layer:
@@ -331,22 +385,32 @@ global_costmap:
         inflation_radius: 0.55
       always_send_full_costmap: True
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   global_costmap_client:
     ros__parameters:
       use_sim_time: True
   global_costmap_rclcpp_node:
     ros__parameters:
       use_sim_time: True
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 map_server:
   ros__parameters:
     use_sim_time: True
 <<<<<<< HEAD
+<<<<<<< HEAD
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
     yaml_filename: ""
+=======
+    yaml_filename: "turtlebot3_world.yaml"
+>>>>>>> origin/main
 =======
     yaml_filename: "turtlebot3_world.yaml"
 >>>>>>> origin/main
@@ -355,15 +419,21 @@ map_saver:
   ros__parameters:
     use_sim_time: True
 <<<<<<< HEAD
+<<<<<<< HEAD
     save_map_timeout: 5.0
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: True
 =======
+=======
+>>>>>>> origin/main
     save_map_timeout: 5000
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: False
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 
 planner_server:
@@ -378,6 +448,7 @@ planner_server:
       allow_unknown: true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 smoother_server:
   ros__parameters:
     use_sim_time: True
@@ -390,16 +461,22 @@ smoother_server:
 
 behavior_server:
 =======
+=======
+>>>>>>> origin/main
 planner_server_rclcpp_node:
   ros__parameters:
     use_sim_time: True
 
 recoveries_server:
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
   ros__parameters:
     costmap_topic: local_costmap/costmap_raw
     footprint_topic: local_costmap/published_footprint
     cycle_frequency: 10.0
+<<<<<<< HEAD
 <<<<<<< HEAD
     behavior_plugins: ["spin", "backup", "drive_on_heading", "assisted_teleop", "wait"]
     spin:
@@ -416,6 +493,8 @@ recoveries_server:
     robot_base_frame: base_link
     transform_tolerance: 0.1
 =======
+=======
+>>>>>>> origin/main
     recovery_plugins: ["spin", "back_up", "wait"]
     spin:
       plugin: "nav2_recoveries/Spin"
@@ -426,6 +505,9 @@ recoveries_server:
     global_frame: odom
     robot_base_frame: base_link
     transform_timeout: 0.1
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
     use_sim_time: true
     simulate_ahead_time: 2.0
@@ -436,6 +518,7 @@ recoveries_server:
 robot_state_publisher:
   ros__parameters:
     use_sim_time: True
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 waypoint_follower:
@@ -463,5 +546,7 @@ velocity_smoother:
     odom_duration: 0.1
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main

@@ -13,7 +13,10 @@
         <xacro:include filename="gazebo_control.xacro" />
     </xacro:unless>
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> origin/main
     <xacro:include filename="lidar.xacro" />
