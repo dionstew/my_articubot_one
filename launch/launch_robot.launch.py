@@ -61,15 +61,7 @@ def generate_launch_description():
 
     diff_drive_spawner = Node(
         package="controller_manager",
-<<<<<<< HEAD
-<<<<<<< HEAD
         executable="spawner",
-=======
-        executable="spawner.py",
->>>>>>> origin/main
-=======
-        executable="spawner.py",
->>>>>>> origin/main
         arguments=["diff_cont"],
     )
 
@@ -82,15 +74,7 @@ def generate_launch_description():
 
     joint_broad_spawner = Node(
         package="controller_manager",
-<<<<<<< HEAD
-<<<<<<< HEAD
         executable="spawner",
-=======
-        executable="spawner.py",
->>>>>>> origin/main
-=======
-        executable="spawner.py",
->>>>>>> origin/main
         arguments=["joint_broad"],
     )
 
