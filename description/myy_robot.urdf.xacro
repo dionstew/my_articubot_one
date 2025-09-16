@@ -7,7 +7,7 @@
     <xacro:include filename="myy_robot_core.xacro" />
 
     <xacro:if value="$(arg use_ros2_control)">
-        <xacro:include filename="my_ros2_control.xacro" />
+        <xacro:include filename="my_ros2_control_humble.xacro" />
     </xacro:if>
     <xacro:unless value="$(arg use_ros2_control)">
         <xacro:include filename="my_gazebo_control.xacro" />

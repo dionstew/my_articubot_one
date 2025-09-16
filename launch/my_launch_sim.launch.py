@@ -9,7 +9,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 from launch_ros.actions import Node
 from launch.actions import RegisterEventHandler
-from launch.event_handlers import OnProcessExit
+from launch.event_handlers import OnProcessStart, OnProcessExit
 
 def generate_launch_description():
 
@@ -56,24 +56,10 @@ def generate_launch_description():
                                    '-entity', 'my_bot'],
                         output='screen')
     
-    delayed_spawn_entity = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=spawn_entity,
-            on_exit=[delayed_gazebo],
-        )
-    )
-    
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["diff_cont"],
-    )
-
-    delayed_diff_drive_spawner = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=spawn_entity,
-            on_exit=[diff_drive_spawner],
-        )
     )
 
     joint_broad_spawner = Node(
@@ -82,12 +68,6 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
     
-    delayed_joint_broad_spawner = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=spawn_entity,
-            on_exit=[joint_broad_spawner],
-        )
-    )
     # Code for delaying a node (I haven't tested how effective it is)
     # 
     # First add the below lines to imports
@@ -109,10 +89,10 @@ def generate_launch_description():
     return LaunchDescription([
         ## original
         rsp,
-        joystick,
-        twist_mux,
-        delayed_gazebo,
-        delayed_spawn_entity,
-        delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        #joystick,
+        #twist_mux,
+        gazebo,
+        spawn_entity,
+        diff_drive_spawner,
+        joint_broad_spawner
     ])
