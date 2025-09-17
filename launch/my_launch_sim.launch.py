@@ -55,7 +55,7 @@ def generate_launch_description():
                         arguments=['-topic', 'robot_description',
                                    '-entity', 'my_bot'],
                         output='screen')
-    
+
     diff_drive_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -67,9 +67,9 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_broad"],
     )
-    
+
     # Code for delaying a node (I haven't tested how effective it is)
-    # 
+    #
     # First add the below lines to imports
     # from launch.actions import RegisterEventHandler
     # from launch.event_handlers import OnProcessExit
@@ -92,7 +92,7 @@ def generate_launch_description():
         #joystick,
         #twist_mux,
         gazebo,
-        spawn_entity,
-        diff_drive_spawner,
-        joint_broad_spawner
+        spawn_entity
+        # diff_drive_spawner,
+        # joint_broad_spawner
     ])
