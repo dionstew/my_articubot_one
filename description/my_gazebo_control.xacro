@@ -10,11 +10,9 @@
             <wheel_separation>0.78</wheel_separation>
             <wheel_diameter>0.38</wheel_diameter>
 
-
             <!-- Limits -->
             <max_wheel_torque>1000</max_wheel_torque>
             <max_wheel_acceleration>100.0</max_wheel_acceleration>
-
             
             <!-- Output -->
             <odometry_frame>odom</odometry_frame>
