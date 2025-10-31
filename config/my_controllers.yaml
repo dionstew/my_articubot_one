@@ -2,7 +2,7 @@ controller_manager:
   ros__parameters:
     update_rate: 30
 
-    use_sim_time: true
+    #use_sim_time: true
 
     diff_cont:
       type: diff_drive_controller/DiffDriveController
@@ -13,7 +13,7 @@ controller_manager:
 diff_cont:
   ros__parameters:
 
-    publish_rate: 50.0
+    publish_rate: 30.0
 
     base_frame_id: base_link
 
@@ -21,7 +21,7 @@ diff_cont:
     right_wheel_names: ['right_wheel_joint']
 
     wheel_separation: 0.78
-    wheel_radius: 0.38
+    wheel_radius: 0.19
     use_stamped_vel: false
 
     # open_loop: false    

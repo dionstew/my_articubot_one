@@ -3,6 +3,8 @@
 
     <xacro:unless value="$(arg sim_mode)">
         <ros2_control name="RealRobot" type="system">
+
+            
             <hardware>
                 <plugin>diffdrive_arduino/DiffDriveArduinoHardware</plugin>
                 <param name="left_wheel_name">left_wheel_joint</param>
@@ -11,8 +13,21 @@
                 <param name="device">/dev/ttyUSB0</param>
                 <param name="baud_rate">57600</param>
                 <param name="timeout_ms">1000</param>
-                <param name="enc_counts_per_rev">400</param>
+                <param name="enc_counts_per_rev">1600</param>
             </hardware>
+            
+            <!--
+            <hardware>
+                <plugin>camdrive_arduino/CamDriveArduinoHardware</plugin>
+                <param name="left_wheel_name">left_wheel_joint</param>
+                <param name="right_wheel_name">right_wheel_joint</param>
+                <param name="loop_rate">30</param>
+                <param name="device">/dev/ttyUSB0</param>
+                <param name="baud_rate">57600</param>
+                <param name="timeout_ms">1000</param>
+                <param name="enc_counts_per_rev">1600</param>
+            </hardware>
+            -->
             <joint name="left_wheel_joint">
                 <command_interface name="velocity">
                     <param name="min">-10</param>

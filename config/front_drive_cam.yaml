@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 480
+camera_name: front_drive_cam
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [621.14885,   0.     , 314.21177,
+           0.     , 620.27432, 222.64594,
+           0.     ,   0.     ,   1.     ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.023411, -0.118928, -0.001751, 0.000831, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [619.84325,   0.     , 314.51717,   0.     ,
+           0.     , 620.61144, 222.08449,   0.     ,
+           0.     ,   0.     ,   1.     ,   0.     ]

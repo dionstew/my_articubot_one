@@ -1,0 +1,13 @@
+usb__cam:
+  ros__parameters:
+    camera_name     : head_camera
+    camera_frame_id : camera_link_optical
+    # camera_info_url : camera_info.yaml
+    
+    image_width     : 640
+    image_height    : 480
+    framerate       : 20
+    
+    # video_device    : "/dev/video0"
+    io_method       : mmap 
+    pixel_format    : mjpeg2rgb
