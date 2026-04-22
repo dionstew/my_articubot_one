@@ -1,7 +1,7 @@
-## Robot Package Template
+## Robot SATRIA template workspace
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+Update v1.5 -> Adjustments to SATRIA platform.
+Update v1.0 -> Initial fork, commit and small changes
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has directories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+Basically, this repo follows the my_articubot_one repository from joshnewans. Kindly check it out!
