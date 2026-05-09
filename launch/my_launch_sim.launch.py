@@ -90,9 +90,9 @@ def generate_launch_description():
         ## original
         rsp,
         #joystick,
-        #twist_mux,
+        twist_mux,
         gazebo,
-        spawn_entity
-#        diff_drive_spawner
-#        joint_broad_spawner
+        spawn_entity,
+       diff_drive_spawner,
+       joint_broad_spawner
     ])
