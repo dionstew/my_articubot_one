@@ -13,6 +13,9 @@
                 <param name="baud_rate">57600</param>
                 <param name="timeout_ms">1000</param>
                 <param name="enc_counts_per_rev">1600</param>
+                <param name="enable_timing_log">false</param>
+                <param name="timing_log_path">/tmp/diffdrive_timing_log.csv</param>
+                <param name="transaction_mode">false</param>
             </hardware>
             
             <!--

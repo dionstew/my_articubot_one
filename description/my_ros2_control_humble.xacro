@@ -18,6 +18,10 @@
           <param name="pid_d">12</param>
           <param name="pid_i">0</param>
           <param name="pid_o">50</param>
+          
+          <param name="enable_timing_log">false</param>
+          <param name="timing_log_path">/tmp/diffdrive_timing_log.csv</param>
+          <param name="transaction_mode">false</param>
         </hardware>
         
         <joint name="${prefix}left_wheel_joint">
